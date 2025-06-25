@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Teams Presence Logger",
+  "version": "1.0",
+  "description": "Logs the presence status of people in Microsoft Teams chats and favorites. Tom Van de Wiele, tom@hackerminded.net",
+  "permissions": [
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://teams.microsoft.com/v2/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://teams.microsoft.com/v2/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

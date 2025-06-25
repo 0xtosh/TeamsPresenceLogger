@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teams Logger</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            width: 300px;
+            padding: 1rem;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        .header {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #1a202c; /* gray-900 */
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        .button {
+            padding: 0.75rem 1.5rem; /* py-3 px-6 */
+            background-color: #4c51bf; /* indigo-700 */
+            color: white;
+            border-radius: 0.5rem; /* rounded-lg */
+            border: none;
+            cursor: pointer;
+            font-size: 1rem; /* text-base */
+            font-weight: 600; /* font-semibold */
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        .button:hover {
+            background-color: #3e44a4; /* indigo-800 */
+        }
+        .clear-button {
+            background-color: #e53e3e; /* red-600 */
+        }
+        .clear-button:hover {
+            background-color: #c53030; /* red-700 */
+        }
+    </style>
+</head>
+<body class="p-4 bg-gray-100 text-gray-800">
+    <div class="container bg-white shadow-lg rounded-xl p-6">
+        <h1 class="header">Teams Logger</h1>
+        <button id="openLogBtn" class="button">View Log</button>
+        <button id="clearLogBtn" class="button clear-button">Clear Log</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
